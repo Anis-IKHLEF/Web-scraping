@@ -8,3 +8,5 @@ The Excel file contains organized columns such as:
 -Team names
 -Match time
 -Final score
+
+NB: try to open the web site before excuting the programme.
