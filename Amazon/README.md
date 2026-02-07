@@ -2,8 +2,7 @@ Description
 
 This script performs the following tasks:
 
-Scrapes Amazon Bestsellers: It starts by scraping the main Amazon Bestsellers page (https://www.amazon.fr/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2
-) to retrieve links to the top categories.
+Scrapes Amazon Bestsellers: It starts by scraping the main Amazon Bestsellers page (https://www.amazon.fr/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2) to retrieve links to the top categories.
 
 Navigates through each category: It extracts the product data for each category and page of bestsellers.
 
@@ -38,4 +37,5 @@ The script handles pagination to ensure that all pages in a category are scraped
 Saving Data in JSON:
 
 All collected data is stored in a file.json file, formatted in a structured and readable way using Python's json.dump() method.
+
 NB : The website might change the selectors, you to change it if necessary.
