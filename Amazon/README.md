@@ -1,41 +1,93 @@
-Description
+# 🛒 E-commerce Product Analysis and Classification
 
-This script performs the following tasks:
+## 📌 Project Description
 
-Scrapes Amazon Bestsellers: It starts by scraping the main Amazon Bestsellers page (https://www.amazon.fr/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2) to retrieve links to the top categories.
+This project demonstrates how **web scraping, data analysis, and machine learning** can be combined to extract valuable insights from e-commerce platforms.
 
-Navigates through each category: It extracts the product data for each category and page of bestsellers.
+The goal of the project is to **automatically collect product data from an online marketplace and classify products into categories using Natural Language Processing (NLP).**
 
-Extracts product details: For each product, it retrieves the following:
+---
 
-Product Name
+# 🔍 Data Collection (Web Scraping)
 
-Rating (if available)
+The first step of the project was scraping **Amazon best-selling products**.
 
-Price (if available)
+Using **Python**, I developed a scraping system that automatically extracts product information such as:
 
-Handles pagination: The script follows pagination links to scrape products across multiple pages within each category.
+- Product title  
+- Price  
+- Rating  
+- Number of reviews  
+- Category  
 
-Stores data in JSON: After collecting the product information, it stores the data in a JSON format file for further use.
+The collected data is stored in a **CSV dataset** for further analysis and model training.
 
-How It Works
+### 💡 Potential Use Cases
 
-Scraping Amazon Categories:
+This type of solution can be used for:
 
-The script fetches the main bestsellers page and identifies all the available product categories by looking for anchor tags with the class a-link-normal.
+- Market research  
+- Competitor analysis  
+- Price monitoring  
+- Product trend analysis  
 
-Iterating Through Products:
+---
 
-For each category, the script fetches the products listed in that category by visiting the category page.
+# 🧹 Data Processing
 
-For each product, it retrieves the name, rating, and price if available. If no price is found, it assigns the price as None.
+After collecting the data, several preprocessing steps were performed:
 
-Handling Pagination:
+- Cleaning missing or inconsistent values  
+- Formatting price and rating information  
+- Preparing textual data for analysis  
 
-The script handles pagination to ensure that all pages in a category are scraped.
+---
 
-Saving Data in JSON:
+# 🧠 Natural Language Processing
 
-All collected data is stored in a file.json file, formatted in a structured and readable way using Python's json.dump() method.
+To analyze product titles, several **NLP preprocessing techniques** were applied:
 
-NB : The website might change the selectors, you to change it if necessary.
+- Lowercasing text  
+- Removing punctuation  
+- Removing stopwords  
+- Text normalization  
+
+These steps help improve the quality and performance of the machine learning model.
+
+---
+
+# 🤖 Machine Learning Model
+
+Classification models were trained to **automatically predict the product category based on the product title**.
+
+Different machine learning algorithms were tested in order to identify the **best-performing model**.
+
+---
+
+# 📊 Results
+
+The final system can successfully **classify e-commerce products using textual data**.
+
+This demonstrates how **AI and automation can help businesses manage large product catalogs more efficiently**.
+
+---
+
+# ⚙️ Technologies Used
+
+- Python  
+- Web Scraping (BeautifulSoup / Requests)  
+- Pandas & NumPy  
+- Scikit-learn  
+- Natural Language Processing (NLP)  
+
+---
+
+# 🚀 Conclusion
+
+This project highlights the ability to build **data-driven solutions** that combine:
+
+- Web scraping  
+- Artificial intelligence  
+- Automation  
+
+to help businesses **analyze markets, monitor competitors, and make smarter decisions**.
